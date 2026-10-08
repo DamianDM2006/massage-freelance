@@ -1,0 +1,1 @@
+Massage-Freelance is an E-Commerce application which allows users to browse and subsequentually set massage appointments with a specific massage therapist.
