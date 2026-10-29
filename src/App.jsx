@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { Routes, Route } from "react-router";
 
-function App() {
+import Layout from "./layout/Layout.jsx";
+
+const App = () => {
   return (
-    <>
-      <h1>Full Moon Massage</h1>
-    </>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+
+      </Route>
+    </Routes>
   );
 }
 
