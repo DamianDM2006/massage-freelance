@@ -1,7 +1,7 @@
 const LanguageSelect = () => {
   return (
     <div className="language">
-      <p>Language Selector</p>
+      <div>Language Selector</div>
     </div>
   )
 };

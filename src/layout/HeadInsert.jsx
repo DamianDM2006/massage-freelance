@@ -1,7 +1,7 @@
 const HeadInsert = () => {
   return (
     <div className="insert">
-      <p>Header Insert</p>
+      <div>Header Insert</div>
     </div>
   )
 };
