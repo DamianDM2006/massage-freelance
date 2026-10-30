@@ -1,4 +1,4 @@
-const Appointments = () => {
+const AppointmentsPage = () => {
   return (
     <div className="Appts">
       <h2>Appointments page</h2>
@@ -6,4 +6,4 @@ const Appointments = () => {
   )
 };
 
-export default Appointments;
+export default AppointmentsPage;
