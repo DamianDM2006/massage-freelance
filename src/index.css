@@ -1,4 +1,28 @@
-.page {
+header {
+  background-color: rgb(244, 244, 205); /*beige-ish*/
   display: grid;
-  background-color: rgb(247, 247, 234); /*beige*/
+  grid-template-areas:
+    "language title insert"
+    "menu title insert";
+}
+
+.insert {
+  grid-area: insert;
+}
+
+.language {
+  grid-area: language;
+}
+
+.menu {
+  display: grid;
+  grid-area: menu;
+}
+
+.page {
+  background-color: rgb(248, 248, 238); /*beige-ish*/
+}
+
+.title {
+  grid-area: title;
 }

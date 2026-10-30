@@ -6,13 +6,17 @@
 import { Outlet } from "react-router";
 
 import NavBar from "./NavBar.jsx";
+import LanguageSelect from "./LanguageSelect.jsx";
+import HeadInsert from"./HeadInsert.jsx";
 
 const Layout = () => {
   return (
     <div className="page">
-      <header>
+      <header className="title">
         <h1>Full Moon Massage</h1>
         <NavBar />
+        <LanguageSelect />
+        <HeadInsert />
       </header>
       <main>
         <Outlet />
