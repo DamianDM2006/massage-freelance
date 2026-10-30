@@ -1,22 +1,22 @@
 import { Routes, Route } from "react-router";
 
 import Layout from "./layout/Layout.jsx";
-import Appointments from "./pages/Appointments.jsx";
-import Home from "./pages/Home.jsx";
-import Login from "./pages/Login.jsx";
-import Profile from "./pages/Profile.jsx";
-import ServiceDetails from "./pages/ServiceDetails.jsx";
+import AppointmentsPage from "./pages/AppointmentsPage.jsx";
+import HomePage from "./pages/HomePage.jsx";
+import LoginPage from "./pages/LoginPage.jsx";
+import ProfilePage from "./pages/ProfilePage.jsx";
+import ServiceDetailsPage from "./pages/ServiceDetailsPage.jsx";
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="/appointments" element={<Appointments />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/serviceDetails" element={<ServiceDetails />} />
+        <Route index element={<HomePage />} />
+        <Route path="/appointments" element={<AppointmentsPage />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/serviceDetails" element={<ServiceDetailsPage />} />
       </Route>
     </Routes>
   );
