@@ -13,6 +13,6 @@ export const getServices = async () => {
     const services = await response.json();
     return services
   } catch(err) {
-    console.log(err)
+    console.log(err);
   }
 };
