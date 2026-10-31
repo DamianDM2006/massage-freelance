@@ -13,6 +13,16 @@ export const getServices = async () => {
     const services = await response.json();
     return services
   } catch(err) {
-    console.log(err);
+    console.log(err)
+  }
+};
+
+export const getServiceDetails = async (id) => {
+  try {
+    const response = await fetch(BASE_URL + '/services/' + id);
+    const service = await response.json();
+    return service
+  } catch(err) {
+    console.log(err)
   }
 };
