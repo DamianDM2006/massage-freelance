@@ -6,6 +6,19 @@ header {
     "menu title insert";
 }
 
+.credsBtn {
+  max-width: 30em;
+  min-height: 5em;
+}
+
+.credsForm {
+  display: grid;
+}
+
+.credsLabl {
+  margin: 1em 1em;
+}
+
 .insert {
   grid-area: insert;
 }
