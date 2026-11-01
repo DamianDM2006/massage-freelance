@@ -4,8 +4,10 @@ import Layout from "./layout/Layout.jsx";
 import AppointmentsPage from "./pages/AppointmentsPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import LoginPage from "./authentications/LoginPage.jsx";
+import RegisterPage from "./authentications/RegisterPage.jsx";
 import ProfilePage from "./pages/ProfilePage.jsx";
 import ServiceDetailsPage from "./pages/ServiceDetailsPage.jsx";
+import Error404 from "./Error404.jsx";
 
 const App = () => {
   return (
@@ -15,8 +17,10 @@ const App = () => {
         <Route path="/appointments" element={<AppointmentsPage />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/home/:id" element={<ServiceDetailsPage />} />
+        <Route path="*" element={<Error404 />} />
       </Route>
     </Routes>
   );
