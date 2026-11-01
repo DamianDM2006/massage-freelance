@@ -1,5 +1,6 @@
-/** INTENDED USES
- *  getting client's data from the database
- * 
- * talks to the database reguarding clients
- */
+import { useState } from "react";
+import { loginCreds, registerCreds } from "../authentications/LoginPage.jsx";
+
+export const login = async(credentials) => {};
+
+export const register = async(credentials) => {};

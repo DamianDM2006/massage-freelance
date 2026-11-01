@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router";
 import Layout from "./layout/Layout.jsx";
 import AppointmentsPage from "./pages/AppointmentsPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
-import LoginPage from "./pages/LoginPage.jsx";
+import LoginPage from "./authentications/LoginPage.jsx";
 import ProfilePage from "./pages/ProfilePage.jsx";
 import ServiceDetailsPage from "./pages/ServiceDetailsPage.jsx";
 

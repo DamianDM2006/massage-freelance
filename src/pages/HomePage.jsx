@@ -24,7 +24,6 @@ const HomePage = () => {
   )}; 
 
   const ServicesList = ({ services }) => {
-      console.log(`services:`, services);
       return (
         <>
           <span >
