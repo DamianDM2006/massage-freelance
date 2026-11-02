@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
+import { useAuth } from "../authentications/AuthContext.jsx";
 import { getServices } from "../api/services.js";
 
 const HomePage = () => {
   const [services, setServices] = useState([]);
+  const { token } = useAuth();
+
   const syncServices = async() => {
     try {
       const data = await getServices();
@@ -45,7 +48,7 @@ const HomePage = () => {
             <h4>{service.title}</h4>
           </Link>
         </span>
-        <Link to={"/appointments"}>
+        <Link to={token ? "/appointments/" + service.id : "/login"}>
           <button><strong>Schedule Appointment</strong> <small>for this service</small>.</button>
           {/* <MakeAppointmnet /> */}
         </Link>
@@ -67,10 +70,10 @@ const HomePage = () => {
       <div className="welcome">
         <h2>Home page: Welcome</h2>
         <p>
-          This is the part where we tell you a little bit about ourselves. We hope you are impressed.
+          {token} This is the part where we tell you a little bit about ourselves. We hope you are impressed.
         </p>
       </div>
-      <ServicesList services={services}/>
+      <ServicesList services={services} />
     </div>
   )
 };

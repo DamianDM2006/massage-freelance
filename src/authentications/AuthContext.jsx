@@ -7,19 +7,21 @@ export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem("token"));
 
   const login = async (credentials) => {
-    console.log(`credentials`,credentials);
     const response = await fetch(BASE_URL + "/clients/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(credentials)
     });
-    console.log(`response:`, response);
-    const text = await response.text();
-    console.log(`text:`, text);
+    const result = await response.text();
+    if (!response.ok) {
+      throw new Error(`Status: ${response.status}: ${response.statusText}!! ${result}`);
+    };
+    setToken(result);
+    localStorage.setItem("token", token);
   };
 
   const value = {
-    // token,
+    token,
     login
     // register,
     // logout

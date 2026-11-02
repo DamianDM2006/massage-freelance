@@ -1,16 +1,22 @@
+import { useState } from "react";
+import { Link, useNavigate } from "react-router";
 import { useAuth } from "./AuthContext.jsx";
 
 const LoginPage = () => {
   const { login } = useAuth();
+  const navigate = useNavigate();
+  const [error, setError] = useState(null);
 
   const tryLogin = async(formData) => {
     const userName = formData.get("userName");
     const password = formData.get("password");
 
     try {
-      await login({ userName, password })
+      await login({ userName, password });
+      navigate(-1);
     } catch(err) {
-      console.log(err);
+      setError(err);
+      console.log(error)
     }
   };
 
